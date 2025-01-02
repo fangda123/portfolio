@@ -1,10 +1,10 @@
 module.exports = {
   apps: [{
-    name: 'showcase',
+    name: 'portfolio',
     script: 'serve',
     env: {
       PM2_SERVE_PATH: './build',
-      PM2_SERVE_PORT: 3000,
+      PM2_SERVE_PORT: 3001,
       PM2_SERVE_SPA: 'true',
       NODE_ENV: 'production',
     },
@@ -15,10 +15,10 @@ module.exports = {
     max_memory_restart: '1G',
     env_production: {
       NODE_ENV: 'production',
-      PM2_SERVE_PORT: 3000
+      PM2_SERVE_PORT: 3001
     },
-    error_file: '/home/logs/showcase/error.log',
-    out_file: '/home/logs/showcase/out.log',
+    error_file: '/home/logs/portfolio/error.log',
+    out_file: '/home/logs/portfolio/out.log',
     time: true
   }]
 }; 
