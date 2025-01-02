@@ -17,8 +17,8 @@ module.exports = {
       NODE_ENV: 'production',
       PM2_SERVE_PORT: 3001
     },
-    error_file: '/home/logs/portfolio/error.log',
-    out_file: '/home/logs/portfolio/out.log',
+    error_file: './logs/error.log',
+    out_file: './logs/out.log',
     time: true
   }]
 }; 
