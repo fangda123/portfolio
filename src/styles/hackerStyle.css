@@ -1,0 +1,84 @@
+/* ตัวอักษรกะพริบ */
+.blinking-cursor::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  color: lime;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* สไตล์ทั่วไป */
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000 !important;
+  color: #00ff00;
+  overflow-x: hidden;
+}
+
+* {
+  font-family: 'Courier New', monospace !important;
+}
+
+/* เอฟเฟกต์ hover สำหรับการ์ด */
+.hover-glow:hover {
+  box-shadow: 0 0 10px #00ff00;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* สไตล์สำหรับลิงก์ */
+a {
+  color: #00ff00;
+  text-decoration: none;
+  position: relative;
+}
+
+a:hover {
+  text-shadow: 0 0 5px #00ff00;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #00ff00;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* สไตล์สำหรับ scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00cc00;
+  box-shadow: 0 0 5px #00ff00;
+} 
